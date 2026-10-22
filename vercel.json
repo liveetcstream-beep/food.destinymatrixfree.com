@@ -1,0 +1,79 @@
+{
+  "framework": null,
+  "buildCommand": "node build.js",
+  "installCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "food.destinymatrixfree.com"
+        }
+      ],
+      "destination": "https://food.destinymatrixfree.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/posts/recipe-post",
+      "destination": "/posts/halloween-party-food-ideas-for-adults",
+      "permanent": true
+    },
+    {
+      "source": "/posts/halloween-snacks-ideas-for-kids",
+      "destination": "/posts/halloween-snack-ideas-for-kids",
+      "permanent": true
+    },
+    {
+      "source": "/posts/25-halloween-snack-ideas-for-kids-that-are-spooky-fun",
+      "destination": "/posts/halloween-snack-ideas-for-kids",
+      "permanent": true
+    },
+    {
+      "source": "/posts/35-thanksgiving-appetizer-ideas-everyone-will-love",
+      "destination": "/posts/thanksgiving-appetizer-ideas",
+      "permanent": true
+    },
+    {
+      "source": "/posts/christmas-appetizer-ideas",
+      "destination": "/posts/34-christmas-appetizer-ideas-everyone-will-love",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-and-conditions",
+      "permanent": true
+    }
+  ]
+}

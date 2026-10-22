@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /dashboard/
+Allow: /
+
+Sitemap: https://recipes.bilalmania.com/sitemap.xml

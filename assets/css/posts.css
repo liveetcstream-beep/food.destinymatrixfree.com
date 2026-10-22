@@ -1,0 +1,582 @@
+/* Cozy Plate Recipes - Blog Posts & Article Pages Styling */
+
+/* ==========================================================================
+   Global Post Box Model & Container Constraints
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box !important;
+}
+
+html, body {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    position: relative;
+    width: 100%;
+}
+
+img, video, iframe, table, pre {
+    max-width: 100% !important;
+    height: auto !important;
+    box-sizing: border-box;
+}
+
+svg {
+    max-width: 100%;
+}
+
+/* ==========================================================================
+   Post Hero Section
+   ========================================================================== */
+.post-hero {
+    padding: 100px 1.5rem 30px;
+    background: #fdfaf7;
+    border-bottom: 1px solid var(--border-color, #f0e6dc);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.post-hero-container {
+    max-width: 920px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    color: var(--dark-muted, #78716c);
+    margin-bottom: 1.25rem;
+    word-break: break-word;
+}
+
+.breadcrumb a {
+    color: var(--dark-muted, #78716c);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary, #ea580c);
+}
+
+.breadcrumb span {
+    color: var(--dark, #1c1917);
+    font-weight: 500;
+}
+
+.post-title {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 2.5rem;
+    line-height: 1.25;
+    color: var(--dark, #1c1917);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.post-meta-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.92rem;
+    color: var(--dark-muted, #78716c);
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border-color, #f0e6dc);
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-weight: 600;
+    color: var(--dark, #1c1917);
+}
+
+.author-avatar-md {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ea580c, #c2410c);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.88rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+}
+
+/* ==========================================================================
+   Post Layout (Desktop 2-Col -> Mobile Fluid 1-Col)
+   ========================================================================== */
+.post-layout {
+    max-width: 1200px;
+    margin: 2.5rem auto 4rem;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 3.5rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.post-main-content {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #332d29;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.post-main-content h2 {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.95rem;
+    color: var(--dark, #1c1917);
+    margin: 2.8rem 0 1.2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #f3ede7;
+    word-break: break-word;
+}
+
+.post-main-content h3 {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.5rem;
+    color: var(--dark, #1c1917);
+    margin: 1.8rem 0 0.8rem;
+    word-break: break-word;
+}
+
+.post-main-content p {
+    margin-bottom: 1.4rem;
+    line-height: 1.85;
+    word-break: break-word;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* Post Image Container & Pinterest Button */
+.post-img-container {
+    position: relative !important;
+    margin: 2rem 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fdfaf7;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f3ede7;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+.post-img-container img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-radius: 14px 14px 0 0;
+}
+
+.post-img-container:hover img {
+    transform: scale(1.02);
+}
+
+.post-img-caption {
+    padding: 0.85rem 1.2rem;
+    background: white;
+    font-size: 0.88rem;
+    color: #78716c;
+    text-align: center;
+    font-style: italic;
+    border-top: 1px solid #f3ede7;
+    word-break: break-word;
+}
+
+/* Pinterest Pin Button */
+.pin-this-btn {
+    position: absolute !important;
+    top: 14px !important;
+    left: 14px !important;
+    background: #e60023 !important;
+    color: #ffffff !important;
+    padding: 8px 16px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(230, 0, 35, 0.45) !important;
+    transition: all 0.25s ease !important;
+    z-index: 20 !important;
+    border: none !important;
+    cursor: pointer !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+}
+
+.pin-this-btn:hover {
+    background: #ad081b !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(230, 0, 35, 0.6) !important;
+}
+
+.pin-this-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    fill: #ffffff !important;
+    flex-shrink: 0 !important;
+}
+
+/* Also ensure pin-save-overlay-btn has proper size */
+.pin-save-overlay-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    fill: currentColor !important;
+    flex-shrink: 0 !important;
+}
+
+/* Recipe Card Box in Articles */
+.recipe-card {
+    margin: 40px 0;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #fed7aa;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.recipe-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.recipe-badges span {
+    white-space: normal !important;
+    word-break: break-word !important;
+}
+
+/* Table of Contents Box */
+.table-of-contents {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    word-break: break-word !important;
+}
+
+/* Content Sections */
+.content-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Social Share Bar */
+.share-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    margin: 2.5rem 0;
+    border-top: 1px solid #f0e6dc;
+    border-bottom: 1px solid #f0e6dc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.share-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--dark, #1c1917);
+}
+
+.share-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+}
+
+.share-btn-pinterest { background: #e60023; }
+.share-btn-facebook { background: #1877f2; }
+.share-btn-twitter { background: #1da1f2; }
+
+/* Sidebar Widgets */
+.sidebar {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.sidebar-widget, .sidebar-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f0e6dc;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+.sidebar-widget-title {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.3rem;
+    color: var(--dark, #1c1917);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid #ffedd5;
+}
+
+/* Sticky Sidebar */
+.sticky-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+/* ==========================================================================
+   Comprehensive Responsive Breakpoints (Tablet & Mobile)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .post-layout {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+        padding: 0 1.2rem !important;
+        margin: 2rem auto 3rem !important;
+    }
+    .post-title {
+        font-size: 2.1rem !important;
+    }
+    .post-hero {
+        padding: 90px 1.2rem 25px !important;
+    }
+    .footer-content {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .post-hero {
+        padding: 80px 16px 20px !important;
+    }
+
+    .post-title {
+        font-size: 1.75rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .post-layout {
+        grid-template-columns: 1fr !important;
+        padding: 0 14px !important;
+        margin: 1.2rem auto 2.5rem !important;
+        gap: 1.8rem !important;
+        width: 100% !important;
+    }
+
+    .post-main-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 1rem !important;
+    }
+
+    .post-main-content h2 {
+        font-size: 1.55rem !important;
+        margin: 2rem 0 1rem !important;
+    }
+
+    .post-main-content h3 {
+        font-size: 1.35rem !important;
+        margin: 1.5rem 0 0.7rem !important;
+    }
+
+    .post-meta-bar {
+        gap: 0.8rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    .recipe-card {
+        padding: 18px 14px !important;
+        margin: 24px 0 !important;
+        border-radius: 12px !important;
+    }
+
+    .recipe-badges span {
+        font-size: 0.76rem !important;
+        padding: 4px 10px !important;
+    }
+
+    .table-of-contents {
+        padding: 16px 14px !important;
+        margin: 25px 0 !important;
+    }
+
+    .pin-this-btn {
+        top: 10px !important;
+        left: 10px !important;
+        padding: 6px 12px !important;
+        font-size: 0.76rem !important;
+    }
+
+    .pin-this-btn svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+
+    .share-bar {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+
+    .share-buttons {
+        width: 100% !important;
+    }
+
+    .share-btn {
+        flex: 1 1 auto !important;
+        text-align: center !important;
+        padding: 8px 12px !important;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 1.8rem !important;
+        padding: 40px 0 25px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-hero {
+        padding: 75px 12px 18px !important;
+    }
+
+    .post-title {
+        font-size: 1.5rem !important;
+    }
+
+    .post-layout {
+        padding: 0 10px !important;
+    }
+
+    .recipe-card {
+        padding: 14px 10px !important;
+    }
+
+    .content-section {
+        margin-top: 30px !important;
+    }
+}
+
+
+/* ==========================================================================
+   Header Mobile Sync for Article Posts
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 64px !important;
+        padding: 0 16px !important;
+        position: relative !important;
+    }
+
+    .nav-actions {
+        display: none !important;
+    }
+
+    .mobile-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        background: #fbfaf8 !important;
+        border: 1.5px solid #e7e5e4 !important;
+        border-radius: 10px !important;
+        color: #292524 !important;
+        font-size: 1.5rem !important;
+        cursor: pointer !important;
+        margin-left: auto !important;
+    }
+
+    .nav-menu {
+        display: none !important;
+        position: absolute !important;
+        top: 64px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        background: #ffffff !important;
+        flex-direction: column !important;
+        padding: 16px 18px 24px !important;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12) !important;
+        border-bottom: 3px solid #ea580c !important;
+        gap: 10px !important;
+        z-index: 1001 !important;
+        box-sizing: border-box !important;
+    }
+
+    .nav-menu.open {
+        display: flex !important;
+    }
+}
+
+
+
+/* Text Justification for Article Content */
+.recipe-content p,
+.recipe-description,
+.post-intro,
+.post-main-content article p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
+}
+
