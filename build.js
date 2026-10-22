@@ -1,4 +1,4 @@
-// build.js — deploy-time trust-signal patches for Cozy Plate Recipes.
+// build.js — deploy-time trust-signal patches for Bite Bliss Kitchen.
 // Applies the real-author byline to all article pages at every Vercel build.
 // Idempotent: re-running changes nothing (string replacements only match the old values).
 const fs = require('fs');
@@ -13,12 +13,12 @@ for (const f of fs.readdirSync(postsDir)) {
   let h = fs.readFileSync(p, 'utf8');
   const orig = h;
   // JSON-LD: generic Organization author -> real Person author
-  h = h.split('"author": { "@type": "Organization", "name": "Cozy Plate Recipes", "url": "https://recipes.bilalmania.com" }')
+  h = h.split('"author": { "@type": "Organization", "name": "Bite Bliss Kitchen", "url": "https://recipes.bilalmania.com" }')
        .join('"author": { "@type": "Person", "name": "Muhammad Bilal", "url": "https://recipes.bilalmania.com/about-us" }');
   // Visible byline: editorial team -> real person
-  h = h.split('<div class="author-avatar-md">CP</div>')
+  h = h.split('<div class="author-avatar-md">BB</div>')
        .join('<div class="author-avatar-md">MB</div>');
-  h = h.split('<span>Cozy Plate Recipes Editorial Team</span>')
+  h = h.split('<span>Bite Bliss Kitchen Editorial Team</span>')
        .join('<span>Muhammad Bilal</span>');
   if (h !== orig) {
     fs.writeFileSync(p, h);

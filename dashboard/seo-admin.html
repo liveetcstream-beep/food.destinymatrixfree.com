@@ -29,7 +29,7 @@
 
     <meta http-equiv="Expires" content="0">
 
-    <title>AI Recipe Creator (Cozy Plate Recipes) - Pinterest & Blog Master</title>
+    <title>AI Recipe Creator (Bite Bliss Kitchen) - Pinterest & Blog Master</title>
     <link rel="icon" type="image/jpeg" href="/assets/images/logo.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -91,9 +91,9 @@
         <div class="w-64 sidebar-gradient text-white flex flex-col justify-between p-6 flex-shrink-0">
             <div>
                 <div class="flex items-center gap-3 mb-6">
-                    <img src="/assets/images/logo.jpg" alt="Cozy Plate Recipes" class="w-12 h-12 rounded-full border-2 border-orange-500 shadow-md object-cover flex-shrink-0" style="width:48px!important;height:48px!important;border-radius:50%!important;object-fit:cover!important;">
+                    <img src="/assets/images/logo.jpg" alt="Bite Bliss Kitchen" class="w-12 h-12 rounded-full border-2 border-orange-500 shadow-md object-cover flex-shrink-0" style="width:48px!important;height:48px!important;border-radius:50%!important;object-fit:cover!important;">
                     <div>
-                        <h1 class="text-xl font-bold tracking-tight">Cozy Plate</h1>
+                        <h1 class="text-xl font-bold tracking-tight">Bite Bliss</h1>
                         <p class="text-orange-400 text-xs font-semibold uppercase tracking-wider">AI Recipe Studio</p>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
             </div>
 
             <div class="text-xs text-stone-500 border-t border-stone-800 pt-4">
-                <p>Cozy Plate Recipes 2026</p>
+                <p>Bite Bliss Kitchen 2026</p>
                 <p class="mt-1">Pinterest & SEO Master</p>
             </div>
         </div>
@@ -471,7 +471,7 @@
 
                             <div>
 
-                                <p class="text-sm font-bold text-purple-900" id="aiStatusTitle">AI is crafting your Cozy Plate recipe article...</p>
+                                <p class="text-sm font-bold text-purple-900" id="aiStatusTitle">AI is crafting your Bite Bliss recipe article...</p>
 
                                 <p class="text-xs text-purple-700 mt-1" id="aiStatusDesc">Creating recipe breakdown, ingredients, flavor profiles, step-by-step cooking steps, and Pinterest pins (~20-30s).</p>
 
@@ -1232,7 +1232,7 @@
 
                 if (currentMode === 'single') {
                     // MODE 2: In-Depth Single Recipe Prompt
-                    prompt = `You are a world-class professional Executive Chef, Recipe Developer, and Food Blogger writing for 'Cozy Plate Recipes' (https://food.destinymatrixfree.com).
+                    prompt = `You are a world-class professional Executive Chef, Recipe Developer, and Food Blogger writing for 'Bite Bliss Kitchen' (https://food.destinymatrixfree.com).
 Write a definitive, in-depth, master recipe guide for: '${title}'.
 Target Audience: Home cooks and passionate foodies seeking a foolproof, restaurant-quality meal.
 
@@ -1310,7 +1310,7 @@ IMPORTANT:
 - Do not mention home decor or unrelated topics.`;
                 } else {
                     // MODE 1: Viral Roundup / Listicle Prompt (Existing)
-                    prompt = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://food.destinymatrixfree.com).
+                    prompt = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Bite Bliss Kitchen' (https://food.destinymatrixfree.com).
 Write a comprehensive, top-notch, 100% topic-tailored 2026 Recipe master article.
 
 ARTICLE DETAILS:
@@ -1396,7 +1396,7 @@ IMPORTANT RULES:
                         return (i + 1) + '. ' + cleanName + ' (Filename: ' + img.name + ')';
                     }).join('\n');
 
-                    const promptBatch1 = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://food.destinymatrixfree.com).
+                    const promptBatch1 = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Bite Bliss Kitchen' (https://food.destinymatrixfree.com).
 Write a comprehensive, top-notch, 100% topic-tailored 2026 Recipe master article.
 
 ARTICLE DETAILS:
@@ -1473,7 +1473,7 @@ IMPORTANT RULES:
                             aiStatusBox.innerHTML = '<div class="p-3 bg-amber-50 rounded-lg border border-amber-200 text-sm text-amber-800 flex items-center gap-2"><div class="loading-spinner inline-block" style="width:16px;height:16px;border-width:2px;"></div> Generating Part ' + (b + 1) + '/' + totalBatches + ' (Recipes ' + (start + 1) + '–' + end + ' of ' + uploadedImages.length + ')...</div>';
                         }
 
-                        const continuationPrompt = `You are a world-class professional Chef and Recipe Developer writing for 'Cozy Plate Recipes'.
+                        const continuationPrompt = `You are a world-class professional Chef and Recipe Developer writing for 'Bite Bliss Kitchen'.
 This is CONTINUATION PART ${b + 1} of the recipe roundup article: '${title}' (${keyword}).
 
 DISHES TO INCLUDE (Generate full recipe cards for these exact dishes in order):
@@ -1709,7 +1709,7 @@ IMPORTANT:
                 );
             }
 
-            const conclusionText = getBlock('[CONCLUSION_START]', '[CONCLUSION_END]') || ('Mastering this ' + data.title + ' gives you a dependable, restaurant-worthy meal right from your home kitchen. Save this pin to your Pinterest recipe boards, share it with family and friends, and check back on Cozy Plate Recipes for more cozy home cooking inspiration!');
+            const conclusionText = getBlock('[CONCLUSION_START]', '[CONCLUSION_END]') || ('Mastering this ' + data.title + ' gives you a dependable, restaurant-worthy meal right from your home kitchen. Save this pin to your Pinterest recipe boards, share it with family and friends, and check back on Bite Bliss Kitchen for more cozy home cooking inspiration!');
 
             const fullData = {
                 ...data,
@@ -1882,7 +1882,7 @@ IMPORTANT:
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${data.title} - Cozy Plate Recipes</title>
+    <title>${data.title} - Bite Bliss Kitchen</title>
     <meta name="description" content="${data.metaDescription}">
     <link rel="canonical" href="${postUrl}">
 
@@ -1892,7 +1892,7 @@ IMPORTANT:
     <meta property="og:type" content="article">
     <meta property="og:url" content="${postUrl}">
     <meta property="og:image" content="${featuredFullImg}">
-    <meta property="og:site_name" content="Cozy Plate Recipes">
+    <meta property="og:site_name" content="Bite Bliss Kitchen">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -1984,8 +1984,8 @@ IMPORTANT:
         "image": ["${featuredFullImg}"],
         "description": "${data.metaDescription.replace(/"/g, '\\"')}",
         "keywords": "${data.keyword}",
-        "author": { "@type": "Organization", "name": "Cozy Plate Recipes", "url": "${siteUrl}" },
-        "publisher": { "@type": "Organization", "name": "Cozy Plate Recipes", "url": "${siteUrl}" },
+        "author": { "@type": "Organization", "name": "Bite Bliss Kitchen", "url": "${siteUrl}" },
+        "publisher": { "@type": "Organization", "name": "Bite Bliss Kitchen", "url": "${siteUrl}" },
         "datePublished": "${dateISO}",
         "dateModified": "${dateISO}",
         "prepTime": "${parseDuration(data.prepTime)}",
@@ -2011,7 +2011,7 @@ IMPORTANT:
 <body>
     <header class="header">
         <div class="header-container">
-            <a href="/" class="logo"><div class="logo-icon">🍲</div>Cozy Plate <span>Recipes</span></a>
+            <a href="/" class="logo"><div class="logo-icon">🍲</div>Bite Bliss <span>Kitchen</span></a>
             <nav>
                 <ul class="nav-menu">
                     <li class="mobile-nav-search-item">
@@ -2050,7 +2050,7 @@ IMPORTANT:
     <div class="mobile-drawer-overlay"></div>
     <div class="mobile-drawer">
         <div class="drawer-header">
-            <a href="/" class="logo"><div class="logo-icon">🍲</div>Cozy Plate <span>Recipes</span></a>
+            <a href="/" class="logo"><div class="logo-icon">🍲</div>Bite Bliss <span>Kitchen</span></a>
             <button class="drawer-close" aria-label="Close menu">&times;</button>
         </div>
         <div class="drawer-search">
@@ -2079,7 +2079,7 @@ IMPORTANT:
             </nav>
             <h1 class="post-title">${data.title}</h1>
             <div class="post-meta">
-                <span class="meta-item"><span class="meta-icon">👤</span> Cozy Plate Chef Team</span>
+                <span class="meta-item"><span class="meta-icon">👤</span> Bite Bliss Chef Team</span>
                 <span class="meta-item"><span class="meta-icon">📅</span> ${dateStr}</span>
                 <span class="meta-item"><span class="meta-icon">🏷️</span> ${catDisplay}</span>
                 <span class="meta-item"><span class="meta-icon">⏱️</span> ${data.totalTime}</span>
@@ -2240,7 +2240,7 @@ IMPORTANT:
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-card">
-                <h3>About Cozy Plate Recipes</h3>
+                <h3>About Bite Bliss Kitchen</h3>
                 <p>Simple, comforting, budget-friendly recipes, party finger foods, and viral dinner ideas crafted for everyday home cooks.</p>
             </div>
 
@@ -2265,7 +2265,7 @@ IMPORTANT:
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="/" class="footer-logo"><div class="logo-icon">🍲</div>Cozy Plate <span>Recipes</span></a>
+                    <a href="/" class="footer-logo"><div class="logo-icon">🍲</div>Bite Bliss <span>Kitchen</span></a>
                     <p>Mouth-watering, budget-friendly home cooking recipes and viral dinner ideas crafted for busy families.</p>
                 </div>
                 <div class="footer-col">
@@ -2278,7 +2278,7 @@ IMPORTANT:
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Follow Cozy Plate</h4>
+                    <h4>Follow Bite Bliss</h4>
                     <ul>
                         <li><a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank">Pinterest</a></li>
                         <li><a href="/contact-us">Contact Team</a></li>
@@ -2287,7 +2287,7 @@ IMPORTANT:
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Cozy Plate Recipes. All rights reserved.</p>
+                <p>&copy; 2026 Bite Bliss Kitchen. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -2678,7 +2678,7 @@ IMPORTANT:
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>${data.title} - Cozy Plate Recipes</title>
+    <title>${data.title} - Bite Bliss Kitchen</title>
 
     <meta name="description" content="${data.metaDescription}">
 
@@ -2698,7 +2698,7 @@ IMPORTANT:
 
     <meta property="og:image" content="${featuredFullImg}">
 
-    <meta property="og:site_name" content="Cozy Plate Recipes">
+    <meta property="og:site_name" content="Bite Bliss Kitchen">
 
 
 
@@ -2754,9 +2754,9 @@ IMPORTANT:
 
         "dateModified": "${dateISO}",
 
-        "author": { "@type": "Organization", "name": "Cozy Plate Recipes", "url": "${siteUrl}" },
+        "author": { "@type": "Organization", "name": "Bite Bliss Kitchen", "url": "${siteUrl}" },
 
-        "publisher": { "@type": "Organization", "name": "Cozy Plate Recipes", "url": "${siteUrl}" },
+        "publisher": { "@type": "Organization", "name": "Bite Bliss Kitchen", "url": "${siteUrl}" },
 
         "mainEntityOfPage": { "@type": "WebPage", "@id": "${postUrl}" },
 
@@ -2804,7 +2804,7 @@ IMPORTANT:
 
         <div class="header-container">
 
-            <a href="/" class="logo"><div class="logo-icon">🍲</div>Cozy Plate <span>Recipes</span></a>
+            <a href="/" class="logo"><div class="logo-icon">🍲</div>Bite Bliss <span>Kitchen</span></a>
 
             <nav>
 
@@ -2864,9 +2864,9 @@ IMPORTANT:
 
                 <div class="post-author">
 
-                    <div class="author-avatar-md">CP</div>
+                    <div class="author-avatar-md">BB</div>
 
-                    <span>Cozy Plate Recipes Editorial Team</span>
+                    <span>Bite Bliss Kitchen Editorial Team</span>
 
                 </div>
 
@@ -2969,7 +2969,7 @@ ${tocItemsHTML}
 
             <div class="conclusion-content" style="font-size: 1.08rem; line-height: 1.85; margin-top: 35px; padding-top: 30px; border-top: 1px solid var(--border-color);">
 
-                <p style="margin-bottom: 18px; line-height: 1.8;">Cooking comforting, delicious meals at home brings friends and families closer together. Save your favorite recipes to your <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank">Pinterest boards</a> and discover more easy dinner ideas on <a href="https://food.destinymatrixfree.com" rel="internal">Cozy Plate Recipes</a>!</p>
+                <p style="margin-bottom: 18px; line-height: 1.8;">Cooking comforting, delicious meals at home brings friends and families closer together. Save your favorite recipes to your <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank">Pinterest boards</a> and discover more easy dinner ideas on <a href="https://food.destinymatrixfree.com" rel="internal">Bite Bliss Kitchen</a>!</p>
 
             </div>
 
@@ -2981,7 +2981,7 @@ ${tocItemsHTML}
 
             <div class="sidebar-card">
 
-                <h3>About Cozy Plate Recipes</h3>
+                <h3>About Bite Bliss Kitchen</h3>
 
                 <p>Simple, comforting, budget-friendly recipes, party finger foods, and viral dinner ideas crafted for everyday home cooks.</p>
 
@@ -3051,13 +3051,13 @@ ${tocItemsHTML}
 
                     <a href="/" class="logo" style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-size: 1.5rem; color: #ffffff; text-decoration: none; margin-bottom: 15px;">
 
-                        <span style="font-size: 1.5rem;">🍲</span> Cozy Plate <span style="color: #ea580c;">Recipes</span>
+                        <span style="font-size: 1.5rem;">🍲</span> Bite Bliss <span style="color: #ea580c;">Recipes</span>
 
                     </a>
 
                     <p style="color: #a0aec0; font-size: 0.95rem; line-height: 1.7; max-width: 340px; margin-bottom: 20px;">
 
-                        Cozy Plate Recipes is your premier kitchen companion for easy weeknight dinners, budget meal prep, party appetizers, and comforting family favorites.
+                        Bite Bliss Kitchen is your premier kitchen companion for easy weeknight dinners, budget meal prep, party appetizers, and comforting family favorites.
 
                     </p>
 
@@ -3129,7 +3129,7 @@ ${tocItemsHTML}
 
             <div style="padding: 25px 0; text-align: center; color: #a0aec0; font-size: 0.9rem;">
 
-                &copy; 2026 Cozy Plate Recipes. All rights reserved. Comforting Family Recipes & Budget Meal Ideas.
+                &copy; 2026 Bite Bliss Kitchen. All rights reserved. Comforting Family Recipes & Budget Meal Ideas.
 
             </div>
 
@@ -3673,7 +3673,7 @@ ${tocItemsHTML}
                         <div class="card-meta"><span>📅 ${dateFormatted}</span><span>⏱️ 20-30 Min</span></div>
                         <h3 class="card-title"><a href="/posts/${slug}">${safeTitle}</a></h3>
                         <p class="card-excerpt">${cleanExcerpt}</p>
-                        <div class="card-footer"><span class="card-author">Cozy Plate Kitchen</span><a href="/posts/${slug}" class="card-read-link">Get Recipes ➔</a></div>
+                        <div class="card-footer"><span class="card-author">Bite Bliss Kitchen</span><a href="/posts/${slug}" class="card-read-link">Get Recipes ➔</a></div>
                     </div>
                 </article>`;
 
@@ -3849,7 +3849,7 @@ ${tocItemsHTML}
                         <div class="card-meta"><span>📅 ${dateFormatted}</span><span>⏱️ 20-30 Min</span></div>
                         <h3 class="card-title"><a href="/posts/${slug}">${safeTitle}</a></h3>
                         <p class="card-excerpt">${cleanExcerpt}</p>
-                        <div class="card-footer"><span class="card-author">Cozy Plate Kitchen</span><a href="/posts/${slug}" class="card-read-link">Get Recipes →</a></div>
+                        <div class="card-footer"><span class="card-author">Bite Bliss Kitchen</span><a href="/posts/${slug}" class="card-read-link">Get Recipes →</a></div>
                     </div>
                 </article>`;
 

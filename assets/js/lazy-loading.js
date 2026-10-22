@@ -1,5 +1,5 @@
 /**
- * Lazy Loading Utility for Cozy Plate Recipes
+ * Lazy Loading Utility for Bite Bliss Kitchen
  * Optimizes image loading, improves Core Web Vitals (LCP/FID/CLS), and ensures zero broken scripts.
  */
 (function() {
