@@ -108,7 +108,7 @@
                     <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-stone-800 transition">
                         <span>📌</span> Pinterest Profile
                     </a>
-                    <a href="https://github.com/liveetcstream-beep/hockeyworldcup2026" target="_blank" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-stone-800 transition">
+                    <a href="https://github.com/liveetcstream-beep/food.destinymatrixfree.com" target="_blank" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-stone-800 transition">
                         <span>🐙</span> GitHub Repository
                     </a>
                     <a href="https://vercel.com/dashboard" target="_blank" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-stone-800 transition">
@@ -182,7 +182,7 @@
                         <span class="text-xl">🐙</span>
                         <div>
                             <div class="flex items-center gap-2"><label class="text-xs font-bold text-stone-900 uppercase tracking-wider">1-Click Auto Publishing System</label><span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-0.5 rounded-full border border-green-300">✅ 100% Pre-Connected</span></div>
-                            <p class="text-[11px] text-stone-500">Commits directly to repo <code class="bg-white px-1 py-0.5 rounded text-orange-700 font-mono">liveetcstream-beep/hockeyworldcup2026</code></p>
+                            <p class="text-[11px] text-stone-500">Commits directly to repo <code class="bg-white px-1 py-0.5 rounded text-orange-700 font-mono">liveetcstream-beep/food.destinymatrixfree.com</code></p>
                         </div>
                     </div>
                     <div class="flex items-center gap-2 flex-1 max-w-md">
@@ -333,13 +333,13 @@
                             <label class="block text-sm font-semibold text-stone-800 mb-2">Category</label>
 
                             <select id="articleCategory" class="w-full px-4 py-2.5 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white">
-                                <option value="fall-recipes" selected>🍂 Fall Recipes</option>
-                                <option value="holiday-recipes">🎄 Holiday Feasts</option>
-                                <option value="budget-meals">💰 Budget Meals</option>
-                                <option value="quick-dinners">⏱️ Quick Dinners</option>
-                                <option value="crockpot-recipes">🥘 Crockpot Meals</option>
-                                <option value="air-fryer">🍟 Air Fryer</option>
-                                <option value="desserts">🍰 Easy Desserts</option>
+                                <option value="appetizers-snacks" selected>🍢 Appetizers & Finger Foods</option>
+                                <option value="crockpot-meals">🍲 Crockpot & Slow Cooker</option>
+                                <option value="holiday-seasonal">🎄 Holiday & Seasonal Feasts</option>
+                                <option value="easy-dinners">🍽️ Easy Dinners & Mains</option>
+                                <option value="desserts-baking">🧁 Desserts & Sweet Treats</option>
+                                <option value="healthy-quick">🥗 Quick & Healthy Bites</option>
+                                <option value="breakfast-brunch">🥞 Breakfast & Brunch</option>
                             </select>
 
                         </div>
@@ -3462,7 +3462,7 @@ ${tocItemsHTML}
         // Helper: Create Git Blob (Zero commits, Zero Vercel rate-limit impact!)
         async function createGitBlob(contentData, encoding, token) {
             const owner = 'liveetcstream-beep';
-            const repo = 'hockeyworldcup2026';
+            const repo = 'food.destinymatrixfree.com';
             const res = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/blobs`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -3479,7 +3479,7 @@ ${tocItemsHTML}
         // Helper: Poll Live Vercel Deployment Status
         async function waitForVercelDeployment(commitSha, token, onProgress) {
             const owner = 'liveetcstream-beep';
-            const repo = 'hockeyworldcup2026';
+            const repo = 'food.destinymatrixfree.com';
             const maxAttempts = 30; // 30 * 3s = 90s
             for (let i = 0; i < maxAttempts; i++) {
                 await new Promise(r => setTimeout(r, 3000));
@@ -3516,7 +3516,7 @@ ${tocItemsHTML}
                 if (btn) { btn.disabled = true; btn.innerHTML = '<span>⏳</span> Initializing...'; }
                 const token = getActiveGhToken();
                 const owner = 'liveetcstream-beep';
-                const repo = 'hockeyworldcup2026';
+                const repo = 'food.destinymatrixfree.com';
                 
                 const refRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/main?_t=${Date.now()}`, { method: 'GET' }, token, 15000);
                 if (!refRes.ok) throw new Error('Could not fetch main branch');
@@ -3570,7 +3570,7 @@ ${tocItemsHTML}
         // Robust Commit Helper with Conflict/Rate-Limit Auto-Retry
         async function commitFileToGitHub(filePath, commitMessage, contentBase64, currentToken) {
             const owner = 'liveetcstream-beep';
-            const repo = 'hockeyworldcup2026';
+            const repo = 'food.destinymatrixfree.com';
             let token = currentToken || getActiveGhToken();
 
             async function attemptCommit(tok) {
@@ -3639,7 +3639,7 @@ ${tocItemsHTML}
         // INTEGRATE ARTICLE INTO LISTINGS (INDEX.HTML, POSTS.HTML, SITEMAP.XML)
         async function integrateArticleIntoListings(token, slug, title, articleData) {
             const owner = 'liveetcstream-beep';
-            const repo = 'hockeyworldcup2026';
+            const repo = 'food.destinymatrixfree.com';
             const siteUrl = 'https://food.destinymatrixfree.com';
             
             const categorySlug = (articleData.category || 'holiday-seasonal').toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -3776,7 +3776,7 @@ ${tocItemsHTML}
 
             const title = (document.getElementById('articleTitle')?.value || '').trim() || generatedArticle?.title || 'Cozy Recipe Post';
             const owner = 'liveetcstream-beep';
-            const repo = 'hockeyworldcup2026';
+            const repo = 'food.destinymatrixfree.com';
             const siteUrl = 'https://food.destinymatrixfree.com';
             const filePath = `posts/${slug}.html`;
 
