@@ -35,17 +35,6 @@
   ],
   "redirects": [
     {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "food.destinymatrixfree.com"
-        }
-      ],
-      "destination": "https://food.destinymatrixfree.com/$1",
-      "permanent": true
-    },
-    {
       "source": "/posts/recipe-post",
       "destination": "/posts/halloween-party-food-ideas-for-adults",
       "permanent": true
